@@ -28,6 +28,7 @@ model Product {
   description String
   price       Float
   imageUrl    String?
+  category    String      @default("Autre")
   stock       Int         @default(0)
   orderItems  OrderItem[]
   createdAt   DateTime    @default(now())
