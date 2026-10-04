@@ -64,3 +64,4 @@ npm test
 
 ## Licence
 MIT — projet open source, contributions bienvenues.
+test ci
