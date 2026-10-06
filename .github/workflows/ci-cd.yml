@@ -71,21 +71,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Debug — check secrets exist
-        run: |
-          if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ]; then
-            echo "❌ DOCKERHUB_USERNAME is EMPTY"
-            exit 1
-          else
-            echo "✅ DOCKERHUB_USERNAME is set (length: ${#DOCKERHUB_USERNAME})"
-          fi
-          if [ -z "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
-            echo "❌ DOCKERHUB_TOKEN is EMPTY"
-            exit 1
-          else
-            echo "✅ DOCKERHUB_TOKEN is set (length: ${#DOCKERHUB_TOKEN})"
-          fi
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
