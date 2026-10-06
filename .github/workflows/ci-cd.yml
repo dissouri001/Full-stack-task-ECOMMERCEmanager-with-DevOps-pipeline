@@ -94,6 +94,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./client
+          build-args: |
+            VITE_API_URL=${{ vars.VITE_API_URL }}
           push: true
           provenance: false
           tags: |
